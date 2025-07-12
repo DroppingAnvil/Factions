@@ -92,7 +92,28 @@
     </build>
 
     <dependencies>
-
+        <!--   Driftay's World Gaurd Bridge is unavailable on maven
+           you must build and compile yourself https://github.com/Driftay/WorldGuard-Bridge
+           I have forked and fixed the pom.xml for usability!-->
+        <dependency>
+            <groupId>cc.javajobs.wgbridge</groupId>
+            <artifactId>WorldGuardBridge</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <!-- EXTREMELY UNSECURE! TODO FIX THIS !-->
+        <!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>2.0</version>
+        </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
