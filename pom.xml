@@ -96,19 +96,13 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.21.1-R0.1-SNAPSHOT</version>
+            <version>1.21.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
             <version>0.9.12</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.Driftay</groupId>
-            <artifactId>WorldGuard-Bridge</artifactId>
-            <version>6c80848837</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -227,17 +221,17 @@
             <version>2022.6</version>
             <scope>provided</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.essentialsx/EssentialsX -->
         <dependency>
-            <groupId>net.ess3</groupId>
+            <groupId>net.essentialsx</groupId>
             <artifactId>EssentialsX</artifactId>
-            <version>2.18.2</version>
-            <scope>provided</scope>
+            <version>2.19.6</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.essentialsx/EssentialsXChat -->
         <dependency>
-            <groupId>net.ess3</groupId>
+            <groupId>net.essentialsx</groupId>
             <artifactId>EssentialsXChat</artifactId>
-            <version>2.0.1</version>
-            <scope>provided</scope>
+            <version>2.21.1</version>
             <exclusions>
                 <exclusion>
                     <artifactId>bukkit</artifactId>
@@ -265,14 +259,12 @@
             <groupId>net.kyori</groupId>
             <artifactId>adventure-text-serializer-legacy</artifactId>
             <version>4.23.0</version>
-            <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.kyori/adventure-text-serializer-gson -->
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-text-serializer-gson</artifactId>
             <version>4.23.0</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
@@ -363,18 +355,18 @@
             </exclusions>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/net.coreprotect/coreprotect -->
         <dependency>
             <groupId>net.coreprotect</groupId>
             <artifactId>coreprotect</artifactId>
-            <version>LATEST</version>
-            <scope>provided</scope>
+            <version>21.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.mojang/authlib -->
         <dependency>
             <groupId>com.mojang</groupId>
             <artifactId>authlib</artifactId>
-            <version>LATEST</version>
-            <scope>compile</scope>
+            <version>1.5.25</version>
         </dependency>
 
         <dependency>
@@ -393,9 +385,13 @@
 
     <repositories>
         <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
+            <id>playpro</id>
+            <url>https://maven.playpro.com/</url>
         </repository>
+            <repository>
+                <id>essentialsx</id>
+                <url>https://repo.essentialsx.net/releases/</url>
+            </repository>
         <repository>
             <id>codemc-repo</id>
             <url>https://repo.codemc.io/repository/maven-public/</url>
@@ -404,11 +400,6 @@
         <repository>
             <id>CodeMC</id>
             <url>https://repo.codemc.org/repository/maven-public</url>
-        </repository>
-        <repository>
-            <id>central</id>
-            <name>bintray</name>
-            <url>https://jcenter.bintray.com</url>
         </repository>
         <repository>
             <id>mojang-repo</id>
@@ -424,7 +415,7 @@
         </repository>
         <repository>
             <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
             <id>sonatype-oss-snapshots1</id>
@@ -453,7 +444,7 @@
         </repository>
         <repository>
             <id>papermc</id>
-            <url>https://papermc.io/repo/repository/maven-public/</url>
+            <url>https://papermc.io/repo/repository/maven-releases/</url>
         </repository>
         <repository>
             <id>minecraft-libraries</id>
@@ -461,13 +452,12 @@
             <url>https://libraries.minecraft.net</url>
         </repository>
         <repository>
-            <id>maven_central</id>
-            <name>Maven Central</name>
-            <url>https://repo.maven.apache.org/maven2/</url>
-        </repository>
-        <repository>
             <id>rosewood-repo</id>
             <url>https://repo.rosewooddev.io/repository/public/</url>
+        </repository>
+        <repository>
+            <id>accStyle</id>
+            <url>https://repo2.acrylicstyle.xyz/</url>
         </repository>
     </repositories>
 
