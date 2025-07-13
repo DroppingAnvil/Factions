@@ -11,8 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.17</maven.compiler.source>
+        <maven.compiler.target>1.17</maven.compiler.target>
         <maven.build.timestamp.format>yyyy-MM-dd--HH-mm</maven.build.timestamp.format>
     </properties>
 
@@ -42,8 +42,8 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.4.1</version>
                 <configuration>
-                    <minimizeJar>false</minimizeJar>
-                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <minimizeJar>true</minimizeJar>
+                    <createDependencyReducedPom>true</createDependencyReducedPom>
                     <relocations>
                         <relocation>
                             <pattern>org.apache.commons.lang3</pattern>
@@ -106,6 +106,7 @@
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
+            <scope>compile</scope>
         </dependency>
         <!-- EXTREMELY UNSECURE! TODO FIX THIS !-->
         <!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
@@ -113,11 +114,13 @@
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>2.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.21.5-R0.1-SNAPSHOT</version>
+
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -137,12 +140,12 @@
             <version>2.2</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.mojang</groupId>
-            <artifactId>brigadier</artifactId>
-            <version>1.0.14</version>
-            <scope>compile</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.mojang</groupId>-->
+<!--            <artifactId>brigadier</artifactId>-->
+<!--            <version>1.0.14</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.github.cryptomorin</groupId>
             <artifactId>XSeries</artifactId>
@@ -247,12 +250,14 @@
             <groupId>net.essentialsx</groupId>
             <artifactId>EssentialsX</artifactId>
             <version>2.19.6</version>
+            <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.essentialsx/EssentialsXChat -->
         <dependency>
             <groupId>net.essentialsx</groupId>
             <artifactId>EssentialsXChat</artifactId>
             <version>2.21.1</version>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <artifactId>bukkit</artifactId>
@@ -269,24 +274,6 @@
             </exclusions>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/net.kyori/adventure-api -->
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-api</artifactId>
-            <version>4.23.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/net.kyori/adventure-text-serializer-legacy -->
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-text-serializer-legacy</artifactId>
-            <version>4.23.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/net.kyori/adventure-text-serializer-gson -->
-        <dependency>
-            <groupId>net.kyori</groupId>
-            <artifactId>adventure-text-serializer-gson</artifactId>
-            <version>4.23.0</version>
-        </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-platform-bukkit</artifactId>
@@ -335,7 +322,7 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>LATEST</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <artifactId>jsr305</artifactId>
@@ -381,6 +368,7 @@
             <groupId>net.coreprotect</groupId>
             <artifactId>coreprotect</artifactId>
             <version>21.2</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.mojang/authlib -->
@@ -388,6 +376,7 @@
             <groupId>com.mojang</groupId>
             <artifactId>authlib</artifactId>
             <version>1.5.25</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -405,10 +394,6 @@
     </dependencies>
 
     <repositories>
-        <repository>
-            <id>playpro</id>
-            <url>https://maven.playpro.com/</url>
-        </repository>
             <repository>
                 <id>essentialsx</id>
                 <url>https://repo.essentialsx.net/releases/</url>
@@ -475,10 +460,6 @@
         <repository>
             <id>rosewood-repo</id>
             <url>https://repo.rosewooddev.io/repository/public/</url>
-        </repository>
-        <repository>
-            <id>accStyle</id>
-            <url>https://repo2.acrylicstyle.xyz/</url>
         </repository>
     </repositories>
 
